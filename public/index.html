@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student App</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h2>Danh sách sinh viên</h2>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Tên</th>
+        <th>Email</th>
+        <th>Tuổi</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dữ liệu sinh viên sẽ load ở đây -->
+    </tbody>
+  </table>
+
+  <h3>Thêm / Sửa sinh viên</h3>
+  <input id="name" type="text" placeholder="Tên">
+  <input id="email" type="email" placeholder="Email">
+  <input id="age" type="number" placeholder="Tuổi">
+  <button id="saveBtn" class="add-btn" onclick="addOrUpdate()">Thêm</button>
+  <button id="cancelBtn" class="cancel-btn" onclick="cancelEdit()" style="display:none;">Hủy</button>
+
+  <script src="./main.js"></script>
+</body>
+</html>
